@@ -10,7 +10,7 @@ interface ResourceFields {
   "Live Site Category"?: string[];
   "Website"?: string;
   "County"?: string;
-  "Organization Sub-Type": string[];
+  "Organization_Type_New": string[];
   "Asset Covered Population": string[];
   "Hide": boolean;
 }
@@ -55,7 +55,7 @@ const useAirtableFetch = (airtableBaseId: string, airtableApiKey: string) => {
 
           const formattedData: Resource[] = data.records.map((record) => ({
             Asset: record.fields["Asset"] || "",
-            Organization_Sub_Type: record.fields["Organization Sub-Type"] || [],
+            Organization_Sub_Type: record.fields["Organization_Type_New"] || [],
             Asset_Description: record.fields["Asset Description"] || "",
             Key_Contact: record.fields["Key Contact"] || "",
             Contact_Email: record.fields["Contact Email"] || "",

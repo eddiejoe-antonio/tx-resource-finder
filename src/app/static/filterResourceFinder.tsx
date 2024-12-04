@@ -105,32 +105,32 @@ export const popFilterData: FilterData = {
     options: [
       {
         type: 'Asset_Covered_Population',
-        value: 'Aging Individuals (Age 60+)',
-        label: 'Aging Individuals (Age 60+)',
+        value: 'Older Adults (Age 60+)',
+        label: 'Older Adults (Age 60+)',
         checked: false,
       },
       {
         type: 'Asset_Covered_Population',
-        value: 'Ethnic or Minority Communities',
-        label: 'Ethnic or Minority Communities',
+        value: 'People from ethnic and racial minority communities',
+        label: 'People from ethnic and racial minority communities',
         checked: false,
       },
       {
         type: 'Asset_Covered_Population',
-        value: 'Incarcerated Individuals',
-        label: 'Incarcerated Individuals',
+        value: 'Justice Impacted Individuals',
+        label: 'Justice Impacted Individuals',
         checked: false,
       },
       {
         type: 'Asset_Covered_Population',
-        value: 'Individuals with disabilities',
-        label: 'Individuals with disabilities',
+        value: 'People living with disabilities',
+        label: 'People living with disabilities',
         checked: false,
       },
       {
         type: 'Asset_Covered_Population',
-        value: 'Limited English Proficiency Individuals',
-        label: 'Limited English Proficiency Individuals',
+        value: 'People who are not fluent in spoken and/or written English',
+        label: 'People who are not fluent in spoken and/or written English',
         checked: false,
       },
       {

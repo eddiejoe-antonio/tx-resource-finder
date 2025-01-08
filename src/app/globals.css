@@ -54,3 +54,17 @@ body {
   visibility: visible;
   opacity: 1;
 }
+/* Container for the grid */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 16px; /* Spacing between cards */
+}
+
+/* Ensure cards have consistent height */
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}

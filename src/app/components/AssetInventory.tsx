@@ -78,6 +78,12 @@ const AssetInventory = () => {
     );
   };
 
+  const resetPage = () => {
+    setCurrentPage(1);
+    scrollToTop();
+  };
+  
+
   const filteredResources = resources.filter((resource) => {
     if (resource.Hide === true) {
       return false;
@@ -205,8 +211,11 @@ const AssetInventory = () => {
               isMulti
               options={geographyFilterData.options}
               value={selectedCounty}
-              onChange={(selected) => setSelectedCounty(selected as FilterOption[])}
-              className="w-full mt-1 shadow-sm "
+              onChange={(selected) => {
+                setSelectedCounty(selected as FilterOption[]);
+                resetPage();
+              }}
+              className="w-full mt-1 shadow-sm"
               styles={customSelectStyles}
               placeholder=""
             />
@@ -229,11 +238,15 @@ const AssetInventory = () => {
               isMulti
               options={typeFilterData.options}
               value={selectedServiceType}
-              onChange={(selected) => setSelectedServiceType(selected as FilterOption[])}
-              className="w-full mt-1 shadow-sm "
+              onChange={(selected) => {
+                setSelectedServiceType(selected as FilterOption[]);
+                resetPage();
+              }}
+              className="w-full mt-1 shadow-sm"
               styles={customSelectStyles}
               placeholder=""
             />
+
           </div>
 
           <div>
@@ -253,8 +266,11 @@ const AssetInventory = () => {
               isMulti
               options={orgFilterData.options}
               value={selectedOrganizationType}
-              onChange={(selected) => setSelectedOrganizationType(selected as FilterOption[])}
-              className="w-full mt-1 shadow-sm "
+              onChange={(selected) => {
+                setSelectedOrganizationType(selected as FilterOption[]);
+                resetPage();
+              }}
+              className="w-full mt-1 shadow-sm"
               styles={customSelectStyles}
               placeholder=""
             />
@@ -277,8 +293,11 @@ const AssetInventory = () => {
               isMulti
               options={popFilterData.options}
               value={selectedPopulationServed}
-              onChange={(selected) => setSelectedPopulationServed(selected as FilterOption[])}
-              className="w-full mt-1 shadow-sm "
+              onChange={(selected) => {
+                setSelectedPopulationServed(selected as FilterOption[]);
+                resetPage();
+              }}
+              className="w-full mt-1 shadow-sm"
               styles={customSelectStyles}
               placeholder=""
             />
